@@ -10,3 +10,6 @@ var convertToTitle = function(n) {
     
     return res.join('')
 };
+//65 A 97 a   48 0;
+// String.fromCharCode    charcode -> Char
+// s.charCodeAt    char -> charCode
