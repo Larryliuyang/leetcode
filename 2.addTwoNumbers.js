@@ -60,3 +60,24 @@ var addTwoNumbers = function(l1, l2) {
    
    return list.val == 0 ? list.next : list;
 };
+
+
+//add binary
+var addBinary = function(a, b) {
+    let carry = 0;
+    let result = "";
+    let sum
+    let l1 = a.length -1, l2 = b.length -1;
+    while (l1 >=0 || l2 >=0) {
+         sum = (+a[l1] ||0) + (+b[l2] || 0) +carry;
+        carry = Math.floor(sum / 2);
+        result = `${sum % 2}${result}`;
+        l1--;
+        l2--;
+    }
+    if (carry !=0) {
+        result = `1${result}`;
+    }
+    return result;
+    
+};
